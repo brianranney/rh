@@ -6,7 +6,7 @@ layout: tagsLayout
 <div class="tagList">
     <ul class="dataList">
         {% for tag in site.tags %}		
-            <li class="tag"><a href="/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
+            <li class="tag"><a href="{{ site.url }}/_site/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
         {% endfor %}
     </ul>
 </div>
