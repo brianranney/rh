@@ -1,0 +1,12 @@
+---
+layout: tagsLayout
+---
+
+<h2 class="pageTitle">complete tag list</h2>
+<div class="tagList">
+    <ul class="dataList">
+        {% for tag in site.tags %}		
+            <li class="tag"><a href="/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

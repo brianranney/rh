@@ -1,0 +1,27 @@
+---
+title: test post
+layout: default
+images: 
+- /images/versailles.jpg
+- /images/church.jpg
+tags: 
+- tag1
+- tag2
+- tag3
+- playlist
+---
+
+<div class="postData postPage">
+    <ul class="dataList">
+        <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
+        <li>//</li>
+        <li>tags:</li>
+        {% for tag in page.tags %}
+        <li class="tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% for image in page.images %}
+<img src="{{ site.url }}{{ image }}" class="img-responsive postImg">
+{% endfor %}
