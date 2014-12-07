@@ -35,7 +35,7 @@ tags:
         <li>//</li>
         <li>tags:</li>
         {% for tag in page.tags %}
-        <li class="tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
         {% endfor %}
     </ul>
 </div>
