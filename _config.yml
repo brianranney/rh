@@ -1,7 +1,7 @@
 name: rh + friends
 description: a blog by Joe and Brian
 
-url: "http://brianranney.github.io/rh/_site"
+url: "http://brianranney.github.io/rh"
 
 paginate: 10
 
