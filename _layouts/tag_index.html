@@ -2,24 +2,28 @@
 
 <h2 class="pageTitle">{{page.title}}</h2>
 
-						{% for post in site.posts %}	
-						{% for tag in post.tags %}
-						{% if tag == page.tag %}
-                        {% for image in post.images limit: 1 %}
-                            <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}{{ image }}" class="img-responsive"></a>
-                            {% endfor %}
-                                <div class="postData">
-                                    <ul class="dataList">
-                                        <li>{{ post.date | date: "%b %-d, %Y" | downcase }}</li>
-                                        <li>//</li>
-                                        <li>tags:</li>
-                                        {% for tag in post.tags %}
-                                        <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-						{% endif %}
-						{% endfor %}
-						{% endfor %}			
+        {% for post in site.posts %} <!-- post loop -->
+        {% for tag in post.tags %} <!-- tag loop -->
+        {% if tag == page.tag %} <!-- tag if -->
+            <div class="postWrap">
+                <div class="postData">
+                    <h3 class="postTitle"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+                    <ul class="dataList">
+                        <li>{{ post.date | date: "%b %-d, %Y" | downcase }}</li>
+                        <li>//</li>
+                        <li>tags:</li>
+                        {% for tag in post.tags %}
+                        <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% for image in post.images limit: 1 %}
+            <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}{{ image }}" class="img-responsive imgBorder"></a>
+            {% endfor %}
+            </div>
+        {% endif %} <!-- end tag if -->
+        {% endfor %} <!-- end tag loop -->
+        {% endfor %} <!-- end post loop -->
 
 {% include footer.html %}
+    

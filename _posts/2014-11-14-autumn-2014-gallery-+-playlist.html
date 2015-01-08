@@ -30,23 +30,24 @@ tags:
 - Testing Tag
 ---
 
-<div class="postData postPage">
-    <h2 class="pageTitle">{{ post.title }}</h2>
-        <ul class="dataList">
-            <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
-            <li>//</li>
-            <li>tags:</li>
-            {% for tag in page.tags %}
-            <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
-        </ul>
-    </h2>
-</div>
+<div class="postWrap">
+    <div class="postData postPage">
+        <h3 class="postTitle">{{ page.title }}</h3>
+            <ul class="dataList">
+                <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
+                <li>//</li>
+                <li>tags:</li>
+                {% for tag in page.tags %}
+                <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+    </div>
 
-{% for image in page.images %}
-<img src="{{ site.url }}{{ image }}" class="img-responsive postImg">
-{% endfor %}
+    {% for image in page.images %}
+    <img src="{{ site.url }}{{ image }}" class="img-responsive postImg imgBorder">
+    {% endfor %}
 
-<div class="spotifyPlaylist">
-<iframe src="https://embed.spotify.com/?uri=spotify:user:1213504934:playlist:3EKtkqzk75CD3FuRdy7IyJ" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+    <div class="spotifyPlaylist">
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:1213504934:playlist:3EKtkqzk75CD3FuRdy7IyJ" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
 </div>

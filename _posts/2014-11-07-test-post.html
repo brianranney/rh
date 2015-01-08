@@ -11,17 +11,21 @@ tags:
 - playlist
 ---
 
-<div class="postData postPage">
-    <ul class="dataList">
-        <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
-        <li>//</li>
-        <li>tags:</li>
-        {% for tag in page.tags %}
-        <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+<div class="postWrap">
+    <div class="postData postPage">
+        <h3 class="postTitle">{{ page.title }}</h3>
+            <ul class="dataList">
+                <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
+                <li>//</li>
+                <li>tags:</li>
+                {% for tag in page.tags %}
+                <li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+    </div>
 
-{% for image in page.images %}
-<img src="{{ site.url }}{{ image }}" class="img-responsive postImg">
-{% endfor %}
+
+    {% for image in page.images %}
+    <img src="{{ site.url }}{{ image }}" class="img-responsive postImg imgBorder">
+    {% endfor %}
+</div>
