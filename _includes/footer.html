@@ -2,5 +2,24 @@
                 </div>
             </div>
         </div>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="//cdn.rawgit.com/noelboss/featherlight/1.0.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://rawgit.com/noelboss/featherlight/master/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('a.gallery').featherlightGallery({
+                gallery: {
+                    previous: '«',
+                    next: '»',
+                    fadeIn: 300
+                },
+                openSpeed: 300
+            });
+        });
+
+    </script>
+
     </body>
 </html>

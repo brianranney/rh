@@ -8,8 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
      
         <link rel="stylesheet" href="http://localhost:4000/stylesheets/style.css" type="text/css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" type="text/css" />
+        <link rel="stylesheet" href="//cdn.rawgit.com/noelboss/featherlight/1.0.3/release/featherlight.min.css" type="text/css"  title="Featherlight Styles" />
+        <link rel="stylesheet" href="http://rawgit.com/noelboss/featherlight/master/release/featherlight.gallery.min.css" type="text/css" />
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
         
@@ -22,8 +24,8 @@
     <body>
     
         <div class="container-fluid">
-            
-            <div class="row">
+
+            <div class="row">    
                 <div class="column-sm-12 column-md-12 column-lg-12">
                     <nav>
 	                   <ul>
@@ -62,9 +64,13 @@
 
 
     
-    <img src="http://localhost:4000/images/versailles.jpg" class="img-responsive postImg imgBorder">
+    <a class="gallery" href="http://localhost:4000/images/versailles.jpg">
+        <img src="http://localhost:4000/images/versailles.jpg" class="img-responsive postImg imgBorder" alt="/images/versailles.jpg">
+    </a>
     
-    <img src="http://localhost:4000/images/church.jpg" class="img-responsive postImg imgBorder">
+    <a class="gallery" href="http://localhost:4000/images/church.jpg">
+        <img src="http://localhost:4000/images/church.jpg" class="img-responsive postImg imgBorder" alt="/images/church.jpg">
+    </a>
     
 </div>
 
@@ -72,5 +78,24 @@
                 </div>
             </div>
         </div>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="//cdn.rawgit.com/noelboss/featherlight/1.0.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://rawgit.com/noelboss/featherlight/master/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('a.gallery').featherlightGallery({
+                gallery: {
+                    previous: '«',
+                    next: '»',
+                    fadeIn: 300
+                },
+                openSpeed: 300
+            });
+        });
+
+    </script>
+
     </body>
 </html>

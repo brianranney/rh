@@ -44,7 +44,9 @@ tags:
     </div>
 
     {% for image in page.images %}
-    <img src="{{ site.url }}{{ image }}" class="img-responsive postImg imgBorder">
+    <a class="gallery" href="{{ site.url }}{{ image }}">
+        <img src="{{ site.url }}{{ image }}" class="img-responsive postImg imgBorder">
+    </a>
     {% endfor %}
 
     <div class="spotifyPlaylist">
