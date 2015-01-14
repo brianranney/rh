@@ -1,0 +1,23 @@
+---
+title: rh+friends deep playlist
+layout: default
+tags: 
+- deep
+- electronic
+- playlist
+---
+
+<div class="postData postPage">
+    <ul class="dataList">
+        <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
+        <li>//</li>
+        <li>tags:</li>
+        {% for tag in page.tags %}
+        <li class="tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="spotifyPlaylist">
+<iframe src="https://embed.spotify.com/?uri=spotify:user:quickenurpace:playlist:1cOyly0glnh240qx2ujKmf" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</div>
