@@ -5,19 +5,27 @@ tags:
 - deep
 - electronic
 - playlist
+playlist: <iframe src="https://embed.spotify.com/?uri=spotify:user:quickenurpace:playlist:1cOyly0glnh240qx2ujKmf" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+playlistSmall: <iframe src="https://embed.spotify.com/?uri=http://open.spotify.com/user/quickenurpace/playlist/1cOyly0glnh240qx2ujKmf" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 ---
 
-<div class="postData postPage">
-    <ul class="dataList">
-        <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
-        <li>//</li>
-        <li>tags:</li>
-        {% for tag in page.tags %}
-        <li class="tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+<div class="postWrap">
+    
+    <div class="postData postPage">
+        <h3 class="postTitle">{{ page.title }}</h3>
+        <ul class="dataList">
+            <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
+            <li>//</li>
+            <li>tags:</li>
+            {% for tag in page.tags %}
+            <li class="tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 
-<div class="spotifyPlaylist">
-<iframe src="https://embed.spotify.com/?uri=spotify:user:quickenurpace:playlist:1cOyly0glnh240qx2ujKmf" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+    <div class="spotifyPlaylist">
+        {{ page.playlist }}
+    </div>
+
 </div>

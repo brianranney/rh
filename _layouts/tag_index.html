@@ -20,6 +20,9 @@
             {% for image in post.images limit: 1 %}
             <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}{{ image }}" class="img-responsive imgBorder"></a>
             {% endfor %}
+            <div class="spotifyPlaylist">
+                {{ post.playlistSmall }}
+            </div>
             </div>
         {% endif %} <!-- end tag if -->
         {% endfor %} <!-- end tag loop -->

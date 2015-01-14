@@ -64,6 +64,7 @@
 
     img { 
         max-width: 100%; 
+        margin: auto;
     }
 
     .imgBorder {
@@ -77,7 +78,7 @@
     } 
 
     .postWrap {
-        padding: 10px 20px 20px;
+        padding: 10px 20px 0px;
         margin: 20px 0px 40px;
         border: 1px solid #000000;
     } 
@@ -197,4 +198,5 @@
 
 .spotifyPlaylist {
     margin-bottom: 20px;
+    text-align: center;
 }
