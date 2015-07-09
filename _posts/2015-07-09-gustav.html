@@ -2,5 +2,22 @@
 published: true
 ---
 
+---
+title: gus
+layout: default
+tags: 
+- dog
+- pug
+- puppy
+---
 
-Hello there!
+<div class="postData postPage">
+    <ul class="dataList">
+        <li>{{ page.date | date: "%b %-d, %Y" | downcase }}</li>
+        <li>//</li>
+        <li>tags:</li>
+        {% for tag in page.tags %}
+        <li class="tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
